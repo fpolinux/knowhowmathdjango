@@ -10,4 +10,4 @@ def enrol(request):
 	return render(request, 'mainapp/enrol.html', {'title': 'Enrol'})
 
 def courses(request):
-	return render(request, 'mainapp/courses.html', {'title': 'Courses'})	
+	return render(request, 'mainapp/courses.html', {'title': 'Courses'})

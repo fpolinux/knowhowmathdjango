@@ -31,17 +31,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'knowhowmath-enrol' %}">Enrol</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'knowhowmath-about' %}">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'knowhowmath-enrol' %}">Enrol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'knowhowmath-about' %}">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                         <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link js-scroll-trigger dropbtn" href="{% url 'knowhowmath-courses' %}">Courses <i class="fas fa-caret-down"></i></a>
                             <div class="dropdown-content">
                             <!-- Dropdown links -->
-                                <a href="#">Level 1 Maths</a>
-                                <a href="#">Level 2 Maths</a>
-                                <a href="#">Level 3 Calculus</a>
+                                <a href="{% url 'knowhowmath-courses' %}#level1">Level 1 Maths</a>
+                                <a href="{% url 'knowhowmath-courses' %}#level2">Level 2 Maths</a>
+                                <a href="{% url 'knowhowmath-courses' %}#level3">Level 3 Calculus</a>
                                 <!--
                                 <a href="#">Scholarship Calculus</a>
                                 <a href="#">Level 3 Statistics</a>
@@ -55,13 +55,43 @@
             </div>
         </nav>
             {% block content %}{% endblock %}
-        
-        <!-- Footer-->
-        <!--
-        <footer class="bg-light py-5">
-            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+<!--
+        <footer class="page-section bg-light" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Praesent est ante, iaculis in neque in, ultrices venenatis odio.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div>PHONE-NUMBER</div>
+                    </div>
+                    
+                    <div class="col-lg-16 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i
+                        > Make sure to change the email address in BOTH the anchor text and the link target below!<a class="d-block" href="mailto:knowhowenquiries@yahoo.com">knowhowenquiries@yahoo.com</a>
+                    </div>
+                </div>
+            </div>
         </footer>
-        -->
+-->
+        <!-- Footer-->
+        <footer class="bg-light py-5" id="contact">
+            <div class="container">
+                <h3 class="medium mt-0 text-muted text-center">Let's Get In Touch!</h3>
+                <div class="small text-center text-muted">Praesent est ante, iaculis in neque in, ultrices venenatis odio.</div>
+                <div class="col-lg-16 mr-auto text-center">
+                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                    <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                    <a class="d-block" href="mailto:knowhowenquiries@yahoo.com">knowhowenquiries@yahoo.com</a>
+                </div>
+            </div>
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
